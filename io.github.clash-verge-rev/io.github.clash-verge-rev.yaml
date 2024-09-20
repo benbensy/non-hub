@@ -1,0 +1,58 @@
+app-id: io.github.clash-verge-rev
+runtime: org.gnome.Platform
+runtime-version: '46'
+sdk: org.gnome.Sdk
+separate-locales: false
+rename-icon: clash-verge
+rename-desktop-file: clash-verge.desktop
+command: clash-verge
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=x11
+  - --socket=pulseaudio
+  - --device=dri
+  - --share=network
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.kde.StatusNotifierWatcher
+modules:
+  - name: clash-verge
+    buildsystem: simple
+    build-options:
+      no-debuginfo: true
+    build-commands:
+      - bsdtar --to-stdout -xf clash-verge.deb data.* | bsdtar -xf -
+      - cp -a usr/bin $FLATPAK_DEST
+      - cp -a usr/lib $FLATPAK_DEST
+      - cp -a usr/share $FLATPAK_DEST/
+      - install -Dm644 io.github.clash-verge-rev.metainfo.xml -t /app/share/metainfo
+    sources:
+      - type: file
+        dest-filename: clash-verge.deb
+        only-arches:
+          - aarch64
+        url: https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.7/clash-verge_1.7.7_arm64.deb
+        sha256: e102a02d33b953554948a54aed1af4ec79855ae956cc985d6131df27d417508f
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest
+          version-query: .tag_name | sub("^v"; "")
+          url-query: '"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v"
+            + $version + "/clash-verge_" + $version + "_arm64.deb"'
+
+      - type: file
+        dest-filename: clash-verge.deb
+        only-arches:
+          - x86_64
+        url: https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.7/clash-verge_1.7.7_amd64.deb
+        sha256: 331d1bf5cf2717c6a5c661acee50458775e57276d5be322c2e8482c8515c1c5a
+        x-checker-data:
+          is-main-source: true
+          type: json
+          url: https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest
+          version-query: .tag_name | sub("^v"; "")
+          url-query: '"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v"
+            + $version + "/clash-verge_" + $version + "_amd64.deb"'
+
+      - type: file
+        path: io.github.clash-verge-rev.metainfo.xml

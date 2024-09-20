@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.clash-verge-rev</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+  <developer_name>clash-verge-rev</developer_name>
+  <name>Clash Verge Rev</name>
+  <summary>Continuation of Clash Verge - A Clash Meta GUI based on Tauri (Windows, MacOS, Linux)</summary>
+  <recommends>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </recommends>
+  <description>
+    <p>Continuation of Clash Verge - A Clash Meta GUI based on Tauri (Windows, MacOS, Linux)</p>
+  </description>
+  <url type="homepage">https://github.com/clash-verge-rev/clash-verge-rev</url>
+  <url type="bugtracker">https://github.com/clash-verge-rev/clash-verge-rev/issues</url>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Preview</caption>
+      <image>https://github.com/clash-verge-rev/clash-verge-rev/raw/main/docs/preview_light.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="1.7.7" date="2024-08-22"/>
+  </releases>
+  <launchable type="desktop-id">io.github.clash-verge-rev.desktop</launchable>
+  <content_rating type="oars-1.1"/>
+  <update_contact>me@indusy.icu</update_contact>
+</component>
