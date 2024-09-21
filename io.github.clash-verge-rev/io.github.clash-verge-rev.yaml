@@ -1,8 +1,7 @@
 app-id: io.github.clash-verge-rev
 runtime: org.gnome.Platform
-runtime-version: "42"
+runtime-version: "46"
 sdk: org.gnome.Sdk
-separate-locales: false
 rename-icon: clash-verge
 rename-desktop-file: clash-verge.desktop
 command: clash-verge
@@ -31,31 +30,17 @@ modules:
       - type: file
         dest-filename: clash-verge.deb
         only-arches:
-          - aarch64
-        url: https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.7/clash-verge_1.7.7_arm64.deb
-        sha256: e102a02d33b953554948a54aed1af4ec79855ae956cc985d6131df27d417508f
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest
-          version-query: .tag_name | sub("^v"; "")
-          url-query:
-            '"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v"
-            + $version + "/clash-verge_" + $version + "_arm64.deb"'
-
-      - type: file
-        dest-filename: clash-verge.deb
-        only-arches:
           - x86_64
-        url: https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.7/clash-verge_1.7.7_amd64.deb
-        sha256: 331d1bf5cf2717c6a5c661acee50458775e57276d5be322c2e8482c8515c1c5a
+        url: https://github.com/benbensy/clash-verge-rev/releases/download/v2.0.0/Clash.Verge_2.0.0_amd64.deb
+        sha256: b96fdfff7f253d4e9300e053b849ce589b34c3e7e60de031bd4fea4a5a58315b
         x-checker-data:
           is-main-source: true
           type: json
-          url: https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest
+          url: https://api.github.com/repos/benbensy/clash-verge-rev/releases/latest
           version-query: .tag_name | sub("^v"; "")
           url-query:
-            '"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v"
-            + $version + "/clash-verge_" + $version + "_amd64.deb"'
+            '"https://github.com/benbensy/clash-verge-rev/releases/download/v"
+            + $version + "/Clash.Verge_" + $version + "_amd64.deb"'
 
       - type: file
         path: io.github.clash-verge-rev.metainfo.xml

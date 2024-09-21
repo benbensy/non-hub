@@ -23,6 +23,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="2.0.0" date="2024-09-21"/>
     <release version="1.7.7" date="2024-08-22"/>
   </releases>
   <launchable type="desktop-id">io.github.clash-verge-rev.desktop</launchable>
