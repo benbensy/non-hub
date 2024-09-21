@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.miru-app</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+  <developer_name>miru-app</developer_name>
+  <name>Miru App</name>
+  <summary>A versatile application that is free, open-source, and supports extension sources for videos, comics, and novels, available on Android, Windows, and Web platforms.</summary>
+  <recommends>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </recommends>
+  <description>
+    <p>A versatile application that is free, open-source, and supports extension sources for videos, comics, and novels, available on Android, Windows, and Web platforms.</p>
+  </description>
+  <url type="homepage">https://miru.js.org</url>
+  <url type="bugtracker">https://github.com/miru-project/miru-app/issues</url>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Preview</caption>
+      <image>https://github.com/benbensy/miru-app/raw/main/assets/screenshot/screenshot.webp</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="1.8.1" date="2024-09-21"/>
+  </releases>
+  <launchable type="desktop-id">io.github.miru-app.desktop</launchable>
+  <content_rating type="oars-1.1"/>
+  <update_contact>me@indusy.icu</update_contact>
+</component>

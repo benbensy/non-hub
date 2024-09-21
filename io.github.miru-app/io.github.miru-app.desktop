@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Miru
+Comment=Miru App
+Exec=miru-app
+Icon=miru
+Categories=AudioVideo;Video;Player;TV;
+Keywords=animation;anime;movie;player;tv;video;ebook;novel;
+Terminal=false

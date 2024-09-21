@@ -17,5 +17,5 @@ jobs:
     - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
       with:
         bundle: clash-verge.flatpak
-        manifest-path: io.github.clash-verge-rev/io.github.clash-verge-rev.yaml
+        manifest-path: io.github.miru-app/io.github.miru-app.yaml
         cache-key: flatpak-builder-${{ github.sha }}

@@ -1,6 +1,6 @@
 app-id: io.github.clash-verge-rev
 runtime: org.gnome.Platform
-runtime-version: '46'
+runtime-version: "42"
 sdk: org.gnome.Sdk
 separate-locales: false
 rename-icon: clash-verge
@@ -16,6 +16,7 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
 modules:
+  - shared-modules/libappindicator/libappindicator-gtk3-12.10.json
   - name: clash-verge
     buildsystem: simple
     build-options:
@@ -37,7 +38,8 @@ modules:
           type: json
           url: https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest
           version-query: .tag_name | sub("^v"; "")
-          url-query: '"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v"
+          url-query:
+            '"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v"
             + $version + "/clash-verge_" + $version + "_arm64.deb"'
 
       - type: file
@@ -51,7 +53,8 @@ modules:
           type: json
           url: https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest
           version-query: .tag_name | sub("^v"; "")
-          url-query: '"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v"
+          url-query:
+            '"https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v"
             + $version + "/clash-verge_" + $version + "_amd64.deb"'
 
       - type: file

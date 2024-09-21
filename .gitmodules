@@ -1,0 +1,6 @@
+[submodule "io.github.miru-app/shared-modules"]
+	path = io.github.miru-app/shared-modules
+	url = https://github.com/flathub/shared-modules
+[submodule "io.github.clash-verge-rev/shared-modules"]
+	path = io.github.clash-verge-rev/shared-modules
+	url = https://github.com/flathub/shared-modules
